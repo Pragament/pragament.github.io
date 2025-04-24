@@ -1,6 +1,121 @@
----
+<!-- ---
 layout: home
 title: Changing the World, One Line of Code at a Time!
 subtitle: We provide technical solutions in areas of education & health.
 ---
-We have few clients in education & health sectors and we provide tech solutions & services to our clients. We built few products for our clients and continuing to add more features to those products & create new innovative products. We believe in simple, scalable, affordable solutions to complex problems.
+We have few clients in education & health sectors and we provide tech solutions & services to our clients. We built few products for our clients and continuing to add more features to those products & create new innovative products. We believe in simple, scalable, affordable solutions to complex problems. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragament Internship Application</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>PRAGAMENT</h1>
+            <p>SIMPLE SOLUTIONS FOR BIG PROBLEMS</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">APPLY FOR INTERNSHIP</a></li>
+                <li><a href="#">FREE TRAINING</a></li>
+                <li><a href="#">OUR PEOPLE</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Left side content -->
+            <section class="content">
+                <h2>Internship Program (With Stipend)</h2>
+                <p class="intro">Designed to provide experience, training, and project exposure. "This is a fully paid internship. There are no costs or fees to participate—interns will be compensated for their work."</p>
+                
+                <div class="image-container">
+                    <img src="./assets/gallery/Office Life/pragament-office-badminton.jpg" alt="Team playing Badminton in office after Lunch">
+                    <p class="caption">Team playing Badminton in office after Lunch.</p>
+                </div>
+                
+                <p>Our internship program(With Stipend) is designed specifically for students and recent graduates seeking practical experience, hands-on training, and exposure to real-world projects. Participants will have the opportunity to earn a <strong>certificate upon completion</strong>, gain valuable insights into their chosen field, and receive a <strong>small stipend as a token of our appreciation</strong> for their contributions.</p>
+                
+                <h3>Assignment and 1 month initial internship Period:</h3>
+                <p>To ensure a good fit, we start with an <strong>unpaid assignment</strong>. Afterward, selected candidates will proceed with a <strong>paid 1 month initial internship period</strong>. This allows both you and our team to evaluate how well you align with the role's expectations. The initial 1 month internship period serves as an introduction to our work environment and allows both parties to assess mutual compatibility before proceeding with a longer-term internship agreement. This is a great opportunity to demonstrate your skills and adaptability in a professional setting.</p>
+            </section>
+            
+            <!-- Right side form -->
+            <section class="form-container">
+                <h2>Apply Now</h2>
+                <form id="internshipForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Highest Education</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select your education</option>
+                            <option value="high-school">High School</option>
+                            <option value="bachelors">Bachelor's Degree</option>
+                            <option value="masters">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="field">Field of Interest</label>
+                        <select id="field" name="field" required>
+                            <option value="">Select your field</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-development">Mobile Development</option>
+                            <option value="ui-ux">UI/UX Design</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Relevant Experience (Years)</label>
+                        <input type="number" id="experience" name="experience" min="0" max="10" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to join this internship?</label>
+                        <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resume">Upload Resume (PDF)</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; Pragament</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
