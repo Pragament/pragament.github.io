@@ -80,12 +80,98 @@ layout: page
             <th>LinkedIn</th>
             <td><a href="{{ person.linkedin }}">Profile</a></td>
           </tr>
+          {% if person.github %}
+            <tr>
+              <th>GitHub</th>
+              <td><a href="https://github.com/{{ person.github }}" target="_blank">@{{ person.github }}</a></td>
+            </tr>
+            <tr>
+              <th>Pull Requests</th>
+              <td>
+                {% assign repo_url = site.github.repository_url | default: "https://github.com/pragament/pragament.github.io" %}
+                <a href="{{ repo_url }}/pulls?q=is%3Apr+author%3A{{ person.github }}" target="_blank">View PRs</a>
+              </td>
+            </tr>
+          {% endif %}
         </tbody>
       </table>
+
+      {% if person.github %}
+        {% assign repo_nwo = site.github.repository_nwo | default: "pragament/pragament.github.io" %}
+        <div class="pr-section" style="margin-top: 1.5rem; border-top: 1px solid #f0f0f0; padding-top: 1.5rem;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Pull Requests</h3>
+          <div id="pr-list-container">
+            <p style="color: #666; font-size: 0.95rem;">Loading pull requests...</p>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const githubUsername = "{{ person.github }}";
+            const repoNwo = "{{ repo_nwo }}";
+            const container = document.getElementById("pr-list-container");
+            
+            if (!githubUsername) return;
+            
+            const apiUrl = `https://api.github.com/search/issues?q=repo:${repoNwo}+type:pr+author:${githubUsername}`;
+            
+            fetch(apiUrl)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error("Failed to fetch PRs from GitHub");
+                }
+                return response.json();
+              })
+              .then(data => {
+                if (!data.items || data.items.length === 0) {
+                  container.innerHTML = `<p style="color: #888; font-size: 0.95rem; font-style: italic;">No pull requests found in this repository.</p>`;
+                  return;
+                }
+                
+                let html = '<ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">';
+                data.items.forEach(pr => {
+                  const stateColor = pr.state === 'open' ? '#28a745' : '#6f42c1';
+                  const stateLabel = pr.state.charAt(0).toUpperCase() + pr.state.slice(1);
+                  const date = new Date(pr.created_at).toLocaleDateString(undefined, {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  });
+                  
+                  html += `
+                    <li style="margin-bottom: 0.75rem; padding: 0.5rem 0.75rem; border: 1px solid #eaeaea; border-radius: 8px; background: #fafafa;">
+                      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;">
+                        <a href="${pr.html_url}" target="_blank" style="font-weight: 600; font-size: 0.95rem; color: #0366d6; text-decoration: none;">
+                          #${pr.number} ${pr.title}
+                        </a>
+                        <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 999px; background: ${stateColor}; color: white; font-weight: 600; white-space: nowrap;">
+                          ${stateLabel}
+                        </span>
+                      </div>
+                      <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">
+                        Created on ${date}
+                      </div>
+                    </li>
+                  `;
+                });
+                html += '</ul>';
+                container.innerHTML = html;
+              })
+              .catch(err => {
+                console.error(err);
+                container.innerHTML = `<p style="color: #cb2431; font-size: 0.95rem;">Error loading pull requests.</p>`;
+              });
+          });
+        </script>
+      {% endif %}
 
       <div class="profile-actions">
         <a href="{{ '/people/' | relative_url }}">Back to People</a>
         <a href="{{ person.linkedin }}">View LinkedIn</a>
+        {% if person.github %}
+          {% assign repo_url = site.github.repository_url | default: "https://github.com/pragament/pragament.github.io" %}
+          <a href="{{ repo_url }}/pulls?q=is%3Apr+author%3A{{ person.github }}" target="_blank">View PRs on GitHub</a>
+        {% endif %}
       </div>
     </div>
   </div>

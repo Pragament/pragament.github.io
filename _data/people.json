@@ -41,6 +41,46 @@
       "status": "Current Team",
       "linkedin": "https://www.linkedin.com/in/aditya-kasoudhan-b74450292/",
       "date_of_joining": "Oct 2025"
+    },
+    {
+      "name": "Aisha Sharma",
+      "slug": "aisha-sharma",
+      "status": "Current Team",
+      "linkedin": "https://www.linkedin.com/in/aishasharma",
+      "github": "aishasharma",
+      "date_of_joining": "Jun 2026"
+    },
+    {
+      "name": "Rahul Reddy",
+      "slug": "rahul-reddy",
+      "status": "Current Team",
+      "linkedin": "https://www.linkedin.com/in/rahulreddy",
+      "github": "rahulreddy",
+      "date_of_joining": "Jun 2026"
+    },
+    {
+      "name": "Priya Nair",
+      "slug": "priya-nair",
+      "status": "Current Team",
+      "linkedin": "https://www.linkedin.com/in/priyanair",
+      "github": "priyanair",
+      "date_of_joining": "Jun 2026"
+    },
+    {
+      "name": "Arjun Kumar",
+      "slug": "arjun-kumar",
+      "status": "Current Team",
+      "linkedin": "https://www.linkedin.com/in/arjunkumar",
+      "github": "arjunkumar",
+      "date_of_joining": "Jun 2026"
+    },
+    {
+      "name": "Neha Gupta",
+      "slug": "neha-gupta",
+      "status": "Current Team",
+      "linkedin": "https://www.linkedin.com/in/nehagupta",
+      "github": "nehagupta",
+      "date_of_joining": "Jun 2026"
     }
   ],
   "past": [
@@ -157,6 +197,7 @@
       "slug": "sahil-prasad",
       "status": "Past Team Member",
       "linkedin": "https://www.linkedin.com/in/sahil-prasad27/",
+      "github": "Sahil-Prasad27",
       "date_of_joining": "Jun 2025",
       "end_date": "Aug 2025",
       "duration": "3 months"

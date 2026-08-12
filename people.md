@@ -63,6 +63,7 @@ permalink: /people/
           <th>Sno</th>
           <th>Name</th>
           <th>LinkedIn</th>
+          <th>Pull Requests</th>
           <th>Date of Joining</th>
         </tr>
       </thead>
@@ -72,6 +73,14 @@ permalink: /people/
             <td>{{ forloop.index }}</td>
             <td><a class="person-link" href="{{ '/people/' | append: member.slug | append: '/' | relative_url }}">{{ member.name }}</a></td>
             <td><a href="{{ member.linkedin }}">Profile</a></td>
+            <td>
+              {% if member.github %}
+                {% assign repo_url = site.github.repository_url | default: "https://github.com/pragament/pragament.github.io" %}
+                <a href="{{ repo_url }}/pulls?q=is%3Apr+author%3A{{ member.github }}" target="_blank">PRs</a>
+              {% else %}
+                -
+              {% endif %}
+            </td>
             <td>{{ member.date_of_joining }}</td>
           </tr>
         {% endfor %}
@@ -89,6 +98,7 @@ permalink: /people/
           <th>Sno</th>
           <th>Name</th>
           <th>LinkedIn</th>
+          <th>Pull Requests</th>
           <th>Date of Joining</th>
           <th>End Date</th>
           <th>Duration</th>
@@ -100,6 +110,14 @@ permalink: /people/
             <td>{{ forloop.index }}</td>
             <td><a class="person-link" href="{{ '/people/' | append: member.slug | append: '/' | relative_url }}">{{ member.name }}</a></td>
             <td><a href="{{ member.linkedin }}">Profile</a></td>
+            <td>
+              {% if member.github %}
+                {% assign repo_url = site.github.repository_url | default: "https://github.com/pragament/pragament.github.io" %}
+                <a href="{{ repo_url }}/pulls?q=is%3Apr+author%3A{{ member.github }}" target="_blank">PRs</a>
+              {% else %}
+                -
+              {% endif %}
+            </td>
             <td>{{ member.date_of_joining }}</td>
             <td>{{ member.end_date }}</td>
             <td>{{ member.duration }}</td>
