@@ -1,0 +1,6 @@
+ProfilePhoto,FullName,DateOfJoining,CollegeName,Degree,Branch,ExpectedGraduationDate,LinkedInProfileURL,GitHubProfileURL
+https://cdn.example.com/interns/aisha-sharma.jpg,Aisha Sharma,2026-06-15,ABC Institute of Technology,B.Tech,Computer Science and Engineering,2027-05-31,https://www.linkedin.com/in/aishasharma,https://github.com/aishasharma
+https://cdn.example.com/interns/rahul-reddy.jpg,Rahul Reddy,2026-06-18,XYZ Engineering College,B.Tech,Information Technology,2026-05-31,https://www.linkedin.com/in/rahulreddy,https://github.com/rahulreddy
+https://cdn.example.com/interns/priya-nair.jpg,Priya Nair,2026-06-20,MNO University,B.E,Electronics and Communication Engineering,2027-06-30,https://www.linkedin.com/in/priyanair,https://github.com/priyanair
+https://cdn.example.com/interns/arjun-kumar.jpg,Arjun Kumar,2026-06-22,DEF College of Engineering,B.Tech,Artificial Intelligence and Machine Learning,2028-05-31,https://www.linkedin.com/in/arjunkumar,https://github.com/arjunkumar
+https://cdn.example.com/interns/neha-gupta.jpg,Neha Gupta,2026-06-23,PQR Institute of Technology,B.Tech,Computer Science and Engineering,2026-05-31,https://www.linkedin.com/in/nehagupta,https://github.com/nehagupta
