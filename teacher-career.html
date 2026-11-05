@@ -1,0 +1,67 @@
+---
+layout: page
+title: Teacher Career
+subtitle: Inspire young minds. Build their tomorrow.
+permalink: /teacher-career/
+css: /assets/css/teacher-career.css
+application_form_url: https://forms.gle/F78KnJiFhUp66iuQ7
+application_embed_url: https://docs.google.com/forms/d/e/1FAIpQLSe-RxKOiwFoxNizFq_km5L0mB9FwkASJ5J7KYjDmr0QsZ5w4Q/viewform?embedded=true
+---
+
+<div class="teacher-career">
+  <nav class="tc-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> <span aria-hidden="true">&rsaquo;</span> <span aria-current="page">Teacher Career</span></nav>
+
+  <section class="tc-hero" aria-labelledby="teaching-heading">
+    <p class="tc-eyebrow">TEACH. INSPIRE. MAKE AN IMPACT.</p>
+    <h2 id="teaching-heading">Teach online &amp; offline<br>with Pragament</h2>
+    <p>Bring coding, AI, and robotics to life for children aged 6–16. Teach online or in school classrooms and school labs, with sessions tailored to each student’s skills and learning level.</p>
+    <a class="tc-button" href="#open-roles">View Open Teaching Roles <span aria-hidden="true">&darr;</span></a>
+    <ol class="tc-steps" aria-label="Your journey to teaching with Pragament">
+      <li><span class="tc-step-number">01</span><strong>Apply</strong><span>Share your details</span></li>
+      <li><span class="tc-step-number">02</span><strong>Assessment</strong><span>Screening and review</span></li>
+      <li><span class="tc-step-number">03</span><strong>Training</strong><span>Practice sessions</span></li>
+      <li><span class="tc-step-number">04</span><strong>Start Earning</strong><span>Guide students</span></li>
+    </ol>
+  </section>
+
+  <section class="tc-section" id="open-roles" aria-labelledby="roles-heading">
+    <p class="tc-eyebrow">FIND YOUR CLASSROOM</p>
+    <h2 id="roles-heading">Open teaching roles</h2>
+    <p>Share what you know. Help the next generation discover what they can create.</p>
+    {% for role in site.data.teaching_roles %}
+    <article class="tc-role" aria-labelledby="{{ role.id }}-heading">
+      <p class="tc-meta">India &middot; Contract &middot; Experience: 2+ years</p>
+      <h3 id="{{ role.id }}-heading">{{ role.title }}</h3>
+      <p>{{ role.description }}</p>
+      <dl class="tc-role-details">
+        <div><dt>Role Impact</dt><dd>{{ role.impact }}</dd></div>
+        <div><dt>Skills &amp; Mindset</dt><dd>{{ role.skills }}</dd></div>
+        <div><dt>Responsibilities &amp; Execution</dt><dd>{{ role.responsibilities }}</dd></div>
+      </dl>
+      <a class="tc-button" href="#educator-application">Apply for {{ role.title }} <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="tc-section tc-form" id="educator-application" aria-labelledby="application-heading">
+    <h2 id="application-heading">Apply to teach with Pragament</h2>
+    <p>Use this application form for all Coding, AI, and Robotics Educator roles.</p>
+    <p><a href="{{ page.application_form_url | escape }}" target="_blank" rel="noopener noreferrer">Open application form in a new tab</a></p>
+    <iframe title="Pragament educator application form — all roles" src="{{ page.application_embed_url | escape }}" loading="lazy">Loading application form…</iframe>
+  </section>
+
+  <section class="tc-schedule" aria-labelledby="schedule-heading">
+    <p class="tc-eyebrow">FLEXIBILITY WITH CONSISTENCY</p>
+    <h2 id="schedule-heading">Choose your teaching shift</h2>
+    <p class="tc-hours">Monday–Saturday <span aria-hidden="true">&middot;</span> 9 AM–4 PM IST</p>
+    <p>Teaching slots are available during school timings. Choose your teaching day(s) and a fixed shift, with a minimum of <strong>2 working hours daily</strong> within your chosen shift.</p>
+    <p>After selection, you must stick with your chosen shift. This consistency helps maintain student alignment and reliable class scheduling.</p>
+  </section>
+
+  <section class="tc-section tc-faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Before you apply</h2>
+    <details open><summary>What happens after I apply?</summary><p>Our team reviews applications and shortlists candidates for technical, mock teaching, and HR rounds. Selected candidates then complete a short training process before the agreement is issued.</p></details>
+    <details open><summary>What kind of role is this?</summary><p>This is a contractual teaching role. You’ll sign a short-term agreement with fixed responsibilities, hours, and shift expectations. It is not a freelance engagement or a full-time employment position.</p></details>
+    <details open><summary>Who will I teach?</summary><p>Our programs are designed for children aged 6–16 years. Each session is tailored to match their skills and learning level, whether it takes place online, in a school classroom, or in a school lab.</p></details>
+  </section>
+</div>
