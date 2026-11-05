@@ -385,6 +385,12 @@ img {
 }
 
 @media (min-width: 1200px) {
+  /* The wordmark already brands the expanded navbar. The centered, absolute
+     avatar reserves no space and can overlap links as the menu grows. */
+  .navbar-custom .avatar-container {
+    display: none;
+  }
+
   .navbar-custom.top-nav-regular .avatar-container {
     width: 6.25rem;
     bottom: -1.9375rem;
