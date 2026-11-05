@@ -1,21 +1,17 @@
-# Replace each placeholder with that role's Google Forms embed URL.
 - id: coding
   title: Coding Educator
-  form_url: "https://docs.google.com/forms/d/e/PLACEHOLDER_CODING_FORM_ID/viewform?embedded=true"
   description: Empower the next generation of tech creators by teaching the foundations of coding through Scratch, Python, and web development. Go beyond syntax—instill creative confidence, computational thinking, and a builder’s mindset in young minds as they design games, apps, and interactive projects that reflect their imagination and problem-solving abilities.
   impact: Empower kids to code and build creatively
   skills: Passion for teaching, logical thinking, coding expertise
   responsibilities: Conduct engaging coding classes and hands-on projects
 - id: ai
   title: AI Educator
-  form_url: "https://docs.google.com/forms/d/e/PLACEHOLDER_AI_FORM_ID/viewform?embedded=true"
   description: Introduce students to the cutting edge of innovation by guiding them through the world of AI. Teach them to use AI tools with creativity and responsibility. Help young learners become creators—not just consumers—of future technology, with ethical thinking and expressive freedom.
   impact: Help kids create using cutting-edge AI tools
   skills: Tech-savvy, ethical, prompt design skills
   responsibilities: Guide students in AI exploration through projects
 - id: robotics
   title: Robotics Educator
-  form_url: "https://docs.google.com/forms/d/e/PLACEHOLDER_ROBOTICS_FORM_ID/viewform?embedded=true"
   description: Bring engineering to life as you teach students to design, code, and build real robots. Use kits and simulators to blend hands-on learning with futuristic thinking. Empower children to turn ideas into innovation, and inspire them to see themselves as inventors and problem-solvers of tomorrow.
   impact: Inspire innovation through hands-on robotics learning
   skills: Robotics knowledge, engaging teaching style

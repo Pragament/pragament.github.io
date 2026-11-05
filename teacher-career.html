@@ -4,6 +4,8 @@ title: Teacher Career
 subtitle: Inspire young minds. Build their tomorrow.
 permalink: /teacher-career/
 css: /assets/css/teacher-career.css
+application_form_url: https://forms.gle/F78KnJiFhUp66iuQ7
+application_embed_url: https://docs.google.com/forms/d/e/1FAIpQLSe-RxKOiwFoxNizFq_km5L0mB9FwkASJ5J7KYjDmr0QsZ5w4Q/viewform?embedded=true
 ---
 
 <div class="teacher-career">
@@ -36,22 +38,16 @@ css: /assets/css/teacher-career.css
         <div><dt>Skills &amp; Mindset</dt><dd>{{ role.skills }}</dd></div>
         <div><dt>Responsibilities &amp; Execution</dt><dd>{{ role.responsibilities }}</dd></div>
       </dl>
-      <details class="tc-application" id="apply-{{ role.id }}">
-        <summary>Apply for {{ role.title }} <span aria-hidden="true">&rarr;</span></summary>
-        <div class="tc-form">
-          <h4>{{ role.title }} application</h4>
-          {% if role.form_url contains 'PLACEHOLDER_' %}
-          <p class="tc-placeholder">Applications will open here soon. This role’s Google Form is being prepared.</p>
-          <!-- Placeholder embed is inactive until a real URL is added in _data/teaching_roles.yml. -->
-          <iframe title="{{ role.title }} application form placeholder" data-src="{{ role.form_url | escape }}" srcdoc="<p style='font-family: sans-serif; padding: 24px; color: #475569;'>Google Form placeholder — application form coming soon.</p>" loading="lazy"></iframe>
-          {% else %}
-          <p><a href="{{ role.form_url | escape }}" target="_blank" rel="noopener noreferrer">Open application form in a new tab</a></p>
-          <iframe title="{{ role.title }} application form" src="{{ role.form_url | escape }}" loading="lazy">Loading application form…</iframe>
-          {% endif %}
-        </div>
-      </details>
+      <a class="tc-button" href="#educator-application">Apply for {{ role.title }} <span aria-hidden="true">&rarr;</span></a>
     </article>
     {% endfor %}
+  </section>
+
+  <section class="tc-section tc-form" id="educator-application" aria-labelledby="application-heading">
+    <h2 id="application-heading">Apply to teach with Pragament</h2>
+    <p>Use this application form for all Coding, AI, and Robotics Educator roles.</p>
+    <p><a href="{{ page.application_form_url | escape }}" target="_blank" rel="noopener noreferrer">Open application form in a new tab</a></p>
+    <iframe title="Pragament educator application form — all roles" src="{{ page.application_embed_url | escape }}" loading="lazy">Loading application form…</iframe>
   </section>
 
   <section class="tc-schedule" aria-labelledby="schedule-heading">
